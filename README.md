@@ -4,7 +4,7 @@ Purpose: As a fellow Marvel stan I wanted to create a fun website that marvel us
 
 Register/Login: As a user of our website, you must register to access all the interactive features. Users have to create a unique username and a password that is at least 8 characters, contains an uppercase and lowercase. If any of the criteria is failed or if the login information is wrong, a cute groot will tell you what you did wrong and the steps you must take to login successfully.
 
-*after log in*
+After login:
 
 General: The general tab is a table of every single Marvel movie ever released. Here users can see the name, the year it was released, the poster, critic score via rotten tomatoes, and a brief description. The users can't input any new data in this tab but they can scroll through all 30 released movies and learn more about each one. This can also help new users who haven't seen all movies learn more aboout each one and see what might interest them to watch.
 
