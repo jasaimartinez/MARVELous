@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    General
+{% endblock %}
+
+{% block main %}
+<!--Create a table-->
+<h3>
+<table class="table table-striped table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Movie Name</th>
+      <th scope="col">Poster</th>
+      <th scope="col">Rotten Tomato Score</th>
+      <th style="width:50%" scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!--Go through our movie sql database-->
+      {% for row in movies %}
+    <tr>
+      <!--Here we put the movie name, the poster, the critic score, and description. So new fans can learn more about each movie and also critic scores before submitting their own ratings-->
+      <td>{{ row["name"] }} - {{ row["year"]}}</td>
+      <td><img src={{ row ["poster"] }} width="100" height="150"></td>
+      <td>{{ row ["critic_score"] }} </td>
+      <td>{{ row["description"] }}</td>
+    </tr>
+      {% endfor %}
+  </tbody>
+</table>
+</h3>
+{% endblock %}

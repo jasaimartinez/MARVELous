@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Discussions
+{% endblock %}
+
+{% block main %}
+<!--displays all posted comments from users so everyone can keep up to date with what marvel fans think about movies-->
+<!--While the main background is the endgame, a white background blends with the discussion post a lot better-->
+<style>
+    body {
+    background-image: url('/static/white.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    }
+</style>
+<!--Cute cartoon images of the original avengers-->
+<img id="1" src="/static/discussion/im.png" width="125" height="125" class="d-inline-block align-top">
+<img id="2" src="/static/discussion/ca.png" width="125" height="130" class="d-inline-block align-top">
+<img id="3" src="/static/discussion/thor.png" width="150" height="125" class="d-inline-block align-top">
+<img id="4" src="/static/discussion/hulk.png" width="150" height="125" class="d-inline-block align-top">
+<img id="5" src="/static/discussion/bw.png" width="150" height="125" class="d-inline-block align-top">
+<img id="6" src="/static/discussion/hawkeye.png" width="150" height="125" class="d-inline-block align-top">
+
+    {% for row in scores %}
+    <!--This goes through every row in scores-->
+    <span class ="fs-4 text-center">
+        <table class="table">
+            <thead>
+                <tr class="table-info">
+                  <th style="width:50%" scope="col">Ratings:</th>
+                  <th style="width:50%"scope="col">Comments:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!--All of our info from ratings submissions will be implemented here. Where our users can see everyone submissions-->
+                <tr class="table-danger" >
+                    <th class="text-center" scope="row"><b>{{ row ["username"] }}</b> rated <b>"{{ row ["name"] }}"</b> with a <b>{{ row ["user_score"] }}%</b></th>
+                    <th scope="row"> The comment left on this rating states: <b>"{{ row ["comment"] }}"</b></th>
+                </tr>
+            </tbody>
+        </table>
+    </span>
+    {% endfor %}
+<!--Stylistic approach of including cartoon images from phase 4 shows to also sprinkle more marvel love-->
+<img id="7" src="/static/discussion/wanda.png" width="150" height="125" class="d-inline-block align-top">
+<img id="8" src="/static/discussion/fws.png" width="150" height="125" class="d-inline-block align-top">
+<img id="9" src="/static/discussion/loki.png" width="150" height="125" class="d-inline-block align-top">
+<img id="10" src="/static/discussion/kate.png" width="150" height="125" class="d-inline-block align-top">
+<img id="11" src="/static/discussion/moon.png" width="150" height="125" class="d-inline-block align-top">
+<img id="12" src="/static/discussion/kamala.png" width="150" height="125" class="d-inline-block align-top">
+<img id="13" src="/static/discussion/shehulk.png" width="150" height="125" class="d-inline-block align-top">
+{% endblock %}

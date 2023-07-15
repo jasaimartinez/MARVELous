@@ -1,0 +1,89 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Ratings
+{% endblock %}
+
+{% block main %}
+<!--This is the bulk of our html where users can interact and rate movies!-->
+<form action="/ratings" method="post">
+  <body>
+    <!--Our header -->
+    <h1 id="rating_header">Rate a Marvel Movie! <br/> <img id="phase_icon" src="/static/avengers.png" width="150" height="75" class="d-inline-block align-top" style="display:none"></h1>
+    <div class="btn-group">
+      <button type="button" class="btn btn-danger btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Phase 1</button>
+    <!--Every dropdown for every phase is essetnially same, we call our picture function from javascript with the 3 parameters-->
+      <div class="dropdown-menu">
+        <button type="button" class="dropdown-item" onclick="picture('/static/movies/iron_1.jpeg','Iron Man','1')">Iron Man</button>
+        <button type="button" class="dropdown-item" onclick="picture('/static/movies/hulk.jpeg','The Incredible Hulk','1')">The Incredible Hulk</button>
+        <button type="button" class="dropdown-item" onclick="picture('/static/movies/iron_2.jpeg','Iron Man 2','1')">Iron Man 2</button>
+        <button type="button" class="dropdown-item" onclick="picture('/static/movies/thor_1.jpeg','Thor','1')">Thor</button>
+        <button type="button" class="dropdown-item" onclick="picture('/static/movies/capamerica_1.jpeg','Captain America: The First Avenger','1')">Captain America: The First Avenger</button>
+        <button type="button" class="dropdown-item" onclick="picture('/static/movies/avengers_1.jpeg','The Avengers','1')">The Avengers</button>
+      </div>
+    </div>
+    <div class="btn-group">
+      <button type="button" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Phase 2</button>
+      <div class="dropdown-menu">
+        <button type="button" class="dropdown-item" onclick="picture('/static/movies/iron_3.jpeg','Iron Man 3','2')">Iron Man 3</button>
+        <button type="button" class="dropdown-item" onclick="picture('/static/movies/thor_2.jpeg','Thor: The Dark World','2')">Thor: The Dark World</button>
+        <button type="button" class="dropdown-item" onclick="picture('/static/movies/capamerica_2.jpeg','Captain America: The Winter Soldier','2')">Captain America: The Winter Soldier</button>
+        <button type="button" class="dropdown-item" onclick="picture('/static/movies/guardians_1.jpeg','Guardians of the Galaxy','2')">Guardians of the Galaxy</button>
+        <button type="button" class="dropdown-item" onclick="picture('/static/movies/avengers_2.jpeg','Avengers: Age of Ultron','2')">Avengers: Age of Ultron</button>
+        <button type="button" class="dropdown-item" onclick="picture('/static/movies/ant_man_1.jpeg','Ant Man','2')">Ant-Man</button>
+      </div>
+    </div>
+    <div class="btn-group">
+      <button type="button" class="btn btn-success btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Phase 3</button>
+      <div class="dropdown-menu">
+        <button type="button" class="dropdown-item" onclick="picture('/static/movies/capamerica_3.jpeg','Captain America: Civil War','3')">Captain America: Civil War</button>
+        <button type="button" class="dropdown-item" onclick="picture('/static/movies/doctorstrange_1.jpeg','Doctor Strange','3')">Doctor Strange</button>
+        <button type="button" class="dropdown-item" onclick="picture('/static/movies/spider_1.jpeg','Spider-Man: Homecoming','3')">Spider-Man: Homecoming</button>
+        <button type="button" class="dropdown-item" onclick="picture('/static/movies/thor_3.jpeg','Thor: Ragnarok','3')">Thor: Ragnarok</button>
+        <button type="button" class="dropdown-item" onclick="picture('/static/movies/blackpanther_1.jpeg','Black Panther','3')">Black Panther</button>
+        <button type="button" class="dropdown-item" onclick="picture('/static/movies/avengers_3.jpeg','Avengers: Infinity War','3')">Avengers: Infinity War</button>
+        <button type="button" class="dropdown-item" onclick="picture('/static/movies/ant_man_2.jpeg','Ant-Man and the Wasp','3')">Ant-Man and the Wasp</button>
+        <button type="button" class="dropdown-item" onclick="picture('/static/movies/capmarvel.jpeg','Captain Marvel','3')">Captain Marvel</button>
+        <button type="button" class="dropdown-item" onclick="picture('/static/movies/avengers_4.jpeg','Avengers: Endgame','3')">Avengers: Endgame</button>
+        <button type="button" class="dropdown-item" onclick="picture('/static/movies/spider_2.jpeg','Spider-Man: Far from Home','3')">Spider-Man: Far From Home</button>
+      </div>
+    </div>
+    <div class="btn-group">
+      <button type="button" class="btn btn-warning btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Phase 4</button>
+      <div class="dropdown-menu">
+        <button type="button" class="dropdown-item" onclick="picture('/static/movies/blackwidow.jpeg','Black Widow','4')">Black Widow</button>
+        <button type="button" class="dropdown-item" onclick="picture('/static/movies/shang.jpeg','Shang-Chi and the Legend of the Ten Rings','4')">Shang-Chi and the Legend of the Ten Rings</button>
+        <button type="button" class="dropdown-item" onclick="picture('/static/movies/eternals.jpeg','Eternals','4')">Eternals</button>
+        <button type="button" class="dropdown-item" onclick="picture('/static/movies/spider_3.jpeg','Spider-Man: No Way Home','4')">Spider-Man: No Way Home</button>
+        <button type="button" class="dropdown-item" onclick="picture('/static/movies/doctorstrange_2.jpeg','Doctor Strange in the Multiverse of Madness','4')">Doctor Strange in the Multiverse of Madness</button>
+         <button type="button" class="dropdown-item" onclick="picture('/static/movies/thor_4.jpeg','Thor: Love and Thunder','4')">Thor: Love and Thunder</button>
+        <button type="button" class="dropdown-item" onclick="picture('/static/movies/blackpanther_2.jpeg','Black Panther: Wakanda Forever','4')">Black Panther: Wakanda Forever</button>
+      </div>
+    </div>
+    <!--Here is where our outputs will show after the onclick. We start with their display set to none and then they will appear and change colors depending on the phase-->
+    <br>
+    <div class="justified">
+      <textarea id="movie_title" style="display:none; color:black; font-size: 15px; text-align: center;" name="movie_title">boy</textarea>
+    </div>
+    <img class="center" id="pic" src="pic" width="250" height="400" style="display:none;">
+    <input name="user_score" type="range" id="ratingInput" value="50" min="1" max="100" style="display:none" oninput="ratingOutput.value=ratingInput.value">
+    <output id="ratingOutput" style="display:none; color:black; font-size:20px;"><b>50</b></output>
+    <br>
+    <!--Here is our user inputs. The user must input the movie they are rating and a comment for their justification of the rating-->
+    <form id="form" class="row g-3" style="display:none" method="post">
+      <div class="fs-1">
+        <div class="row justify-content-center">
+          <div class="mb-3">
+            <label id="label" class="form-label" style="display:none">Submit your movie and a comment to your rating:<img id="phase_image" src="" width="50" height="50" class="d-inline-block align-top"></label>
+            <input id="text2" class="form-control" style="display:none" autocomplete="off" rows="3" autofocus class="form-control" name="comment" placeholder="I thought that this movie..." type="text" >
+          </div>
+          <!--Our final submit button that will input the users rating-->
+          <div class="col-auto">
+            <button id="submit" type="submit" class="btn btn-primary mb-3 center" style="display:none">Submit</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </body>
+</form>
+{% endblock %}
