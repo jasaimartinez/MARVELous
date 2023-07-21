@@ -1,5 +1,6 @@
-Youtube Link: https://youtu.be/DD1OSZYHsA8
-:This project runs through flask and uses elements of HTML, CSS, JS, and Python:
+Youtube Link of demonstrating app: https://youtu.be/DD1OSZYHsA8
+
+This project runs through flask and uses elements of HTML, CSS, JS, and Python:
 Purpose: As a fellow Marvel stan I wanted to create a fun website that marvel users can use to get information about every movie ever released. Users can see critic ratings for each movie and descriptions, they can rate movies themselves, and see how other marvels stans have rated movies!
 
 Register/Login: As a user of our website, you must register to access all the interactive features. Users have to create a unique username and a password that is at least 8 characters, contains an uppercase and lowercase. If any of the criteria is failed or if the login information is wrong, a cute groot will tell you what you did wrong and the steps you must take to login successfully.
