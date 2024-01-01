@@ -1,5 +1,5 @@
 # Welcome to Marvelous! 🦸
-<b>[App Demo](https://youtu.be/DD1OSZYHsA8) </b>
+<b>[YouTube App Demo](https://youtu.be/DD1OSZYHsA8) </b>
 
 This project runs through Flask and uses elements of HTML, CSS, JavaScript, SQL, and Python:
 Purpose: As a fellow Marvel stan I wanted to create a fun website that marvel users can use to get information about every movie ever released. Users can see critic ratings for each movie and descriptions, they can rate movies themselves, and see how other marvels stans have rated movies!
