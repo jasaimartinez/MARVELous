@@ -8,8 +8,6 @@ Purpose: As a fellow Marvel stan I wanted to create a fun website that marvel us
 
 <ins>Register/Login</ins>: As a user of our website, you must register to access all the interactive features. Users have to create a unique username and a password that is at least 8 characters, contains an uppercase and lowercase. If any of the criteria is failed or if the login information is wrong, a cute groot will tell you what you did wrong and the steps you must take to login successfully.
 
-*After login*
-
 <ins>General</ins>: The general tab is a table of every single Marvel movie ever released. Here users can see the name, the year it was released, the poster, critic score via rotten tomatoes, and a brief description. The users can't input any new data in this tab but they can scroll through all 30 released movies and learn more about each one. This can also help new users who haven't seen all movies learn more aboout each one and see what might interest them to watch.
 
 <ins>Ratings</ins>: This is the fun part where all the action happens. The Marvel Cinematic Universe (MCU) is broken up into four phases that have all been complete. Each phase marks a new beginning for the MCU and users can rank every movie in every phase! Click each dropdown phase to see the list of movies released in that phase. Then Click the specific movie you want to rate.
